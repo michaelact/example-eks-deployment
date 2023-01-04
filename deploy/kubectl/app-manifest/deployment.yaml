@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-nodejs-on-fargate
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: container-nodejs-on-fargate
+  template:
+      name: container-nodejs-on-fargate
+    spec:
+      containers:
+        - image: michaelact/container-nodejs-on-fargate:latest
+          name: container-nodejs-on-fargate
+          ports:
+            - containerPort: 80
+      restartPolicy: Always

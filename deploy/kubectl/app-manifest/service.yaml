@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: container-nodejs-on-fargate
+  namespace: dev
+spec:
+  ports:
+    - name: container-nodejs-on-fargate
+      port: 80
+      targetPort: 80
+  selector:
+    app.kubernetes.io/name: container-nodejs-on-fargate
