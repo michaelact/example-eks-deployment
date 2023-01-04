@@ -18,7 +18,7 @@
 
 ## Deployment
 1. Choose what deployment tools do you want to try, currently available are:
-   - [eksctl](./deploy/eksctl/)
+   - [kubectl](./deploy/kubectl/)
    - [AWS-CLI](./deploy/aws-cli/)
    - [Terraform](./deploy/terraform/)
 2. Follow the instruction there
