@@ -2,8 +2,9 @@
 
 ## Requirements
 1. [eksctl](https://github.com/aws/amazon-ecs-cli#installing): 0.124.0
-2. [kubectl](https://eksctl.io/introduction/#installation)
-3. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
+2. [helm](https://helm.sh/docs/intro/install/): 3.10.3
+3. [kubectl](https://eksctl.io/introduction/#installation)
+4. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
 
 ## Specify AWS Profile
 1. Set AWS Profile to `exploration`: `export AWS_DEFAULT_PROFILE=exploration`

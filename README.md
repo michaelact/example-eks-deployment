@@ -2,8 +2,10 @@
 
 ## Requirements
 1. [eksctl](https://github.com/aws/amazon-ecs-cli#installing): 0.124.0
-2. [kubectl](https://eksctl.io/introduction/#installation)
-3. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
+2. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html): 2.4.7
+3. [kubectl](https://eksctl.io/introduction/#installation)
+4. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
+5. [helm](https://helm.sh/docs/intro/install/): 3.10.3
 6. [Docker](https://docs.docker.com/engine/install/)
 
 ## Configure AWS Profile
