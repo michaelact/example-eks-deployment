@@ -1,9 +1,9 @@
 # Example of EKS CLI Deployment 
 
 ## Requirements
-1. [eksctl](https://github.com/aws/amazon-ecs-cli#installing): 0.124.0
+1. [eksctl](https://eksctl.io/introduction/#installation): 0.124.0
 2. [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html): 2.4.7
-3. [kubectl](https://eksctl.io/introduction/#installation)
+3. [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 4. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
 5. [helm](https://helm.sh/docs/intro/install/): 3.10.3
 6. [Docker](https://docs.docker.com/engine/install/)
@@ -19,6 +19,6 @@
 ## Deployment
 1. Choose what deployment tools do you want to try, currently available are:
    - [kubectl](./deploy/kubectl/)
-   - [AWS-CLI](./deploy/aws-cli/)
-   - [Terraform](./deploy/terraform/)
+   - [AWS-CLI](./deploy/aws-cli/) [WIP]
+   - [Terraform](./deploy/terraform/) [WIP]
 2. Follow the instruction there

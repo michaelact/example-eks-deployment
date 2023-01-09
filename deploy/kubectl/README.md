@@ -1,9 +1,9 @@
 # Deploy AWS EKS Fargate using `eksctl`, `kubectl` and `terraform`
 
 ## Requirements
-1. [eksctl](https://github.com/aws/amazon-ecs-cli#installing): 0.124.0
+1. [eksctl](https://eksctl.io/introduction/#installation): 0.124.0
 2. [helm](https://helm.sh/docs/intro/install/): 3.10.3
-3. [kubectl](https://eksctl.io/introduction/#installation)
+3. [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 4. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
 
 ## Specify AWS Profile
