@@ -2,11 +2,11 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: eks-cluster-glx-exploration-fargate
+  name: eks-cluster-exploration-fargate
   region: us-east-2
 
 iam:
-  withOIDC: false   
+  withOIDC: true   
   serviceAccounts:
     - metadata:
         name: aws-load-balancer
@@ -16,25 +16,22 @@ iam:
 
 vpc:
   id: ${vpc_id}
+  securityGroup: ${security_group_id}
   subnets:
     private:
-      us-east-2a: { id: ${subnet_az_a_id} }
-      us-east-2b: { id: ${subnet_az_b_id} }
+      us-east-2a: { id: ${private_subnet_a_id} }
+      us-east-2b: { id: ${private_subnet_b_id} }
+    public:
+      us-east-2a: { id: ${public_subnet_a_id} }
+      us-east-2b: { id: ${public_subnet_b_id} }
 
 fargateProfiles:
   - name: fp-default
     selectors:
-      # All workloads in the "default" Kubernetes namespace will be
-      # scheduled onto Fargate:
       - namespace: default
-      # All workloads in the "kube-system" Kubernetes namespace will be
-      # scheduled onto Fargate:
       - namespace: kube-system
   - name: fp-dev
     selectors:
-      # All workloads in the "dev" Kubernetes namespace matching the following
-      # label selectors will be scheduled onto Fargate:
       - namespace: dev
         labels:
           env: dev
-          checks: passed

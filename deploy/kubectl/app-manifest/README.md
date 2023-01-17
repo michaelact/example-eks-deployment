@@ -4,7 +4,7 @@
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
 ## Spawn Resources
-1. Run `kubectl create -d .`
+1. Run `kubectl apply -f .`
 
 ## Destroying Resources
-1. Run `kubectl delete -d .`
+1. Run `kubectl delete -f .`

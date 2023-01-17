@@ -1,15 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    app.kubernetes.io/name: container-nodejs-on-fargate
+    env: dev
   name: container-nodejs-on-fargate
   namespace: dev
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: container-nodejs-on-fargate
+      env: dev
   template:
-      name: container-nodejs-on-fargate
+    metadata:
+      labels:
+        app.kubernetes.io/name: container-nodejs-on-fargate
+        env: dev
     spec:
       containers:
         - image: michaelact/container-nodejs-on-fargate:latest

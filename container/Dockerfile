@@ -6,7 +6,7 @@ COPY package.json /app/
 RUN npm install
 
 COPY app.js /app/
-COPY public /app/
+COPY public/ /app/public/
 
 LABEL creator="Austin Loveless"
 LABEL maintainer="Michael Act"

@@ -29,3 +29,5 @@ override.tf.json
 # example: *tfplan*
 
 cluster.yaml
+ingress.yaml
+helm-values-alb.yaml
