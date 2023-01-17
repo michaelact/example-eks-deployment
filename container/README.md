@@ -11,9 +11,16 @@
 3. See it on: https://hub.docker.com/r/michaelact/container-nodejs-on-fargate
 
 ## Push to ECR Repository (Alternative 2)
-1. Create ECR Repository `cd /path/to/example-ecs-deployment/aws-cli/; ./00_create_ecr_repository.sh AWS_ACCOUNT_ID`
-2. Retag `docker tag michaelact/container-nodejs-on-fargate:latest AWS_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/container-on-aws/nodejs:latest`
-3. `docker push AWS_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/container-on-aws/nodejs:latest`
+1. Create ECR Repository `aws --profile exploration --region us-east-2 ecr create-repository --repository-name container-on-aws/nodejs`
+2. ECR Registry Authentication:
+```
+aws --profile exploration --region us-east-2 ecr get-login-password \
+	--region us-east-2 | docker login \
+		--username AWS \
+		--password-stdin $AWS_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com`
+```
+3. Retag `docker tag michaelact/container-nodejs-on-fargate:latest AWS_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/container-on-aws/nodejs:latest`
+4. `docker push AWS_ACCOUNT_ID.dkr.ecr.us-east-2.amazonaws.com/container-on-aws/nodejs:latest`
 
 ## Links and References
 - https://levelup.gitconnected.com/aws-fargate-running-a-serverless-node-js-app-on-aws-ecs-c5d8dea0a85a
