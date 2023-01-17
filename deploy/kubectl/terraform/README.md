@@ -10,3 +10,9 @@
 
 ## Destroying Resources
 1. Run `terraform destroy`
+
+## Links and References
+- https://developer.hashicorp.com/terraform/tutorials/aws-get-started
+- https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws/latest
+- https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest
+- https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file

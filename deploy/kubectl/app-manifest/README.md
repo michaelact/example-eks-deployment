@@ -8,3 +8,9 @@
 
 ## Destroying Resources
 1. Run `kubectl delete -f .`
+
+## Links and References
+- https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#writing-a-deployment-spec
+- https://kubernetes.io/docs/concepts/services-networking/ingress/#the-ingress-resource
+- https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+- https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service

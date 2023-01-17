@@ -9,7 +9,7 @@
 ## Specify AWS Profile
 1. Set AWS Profile to `exploration`: `export AWS_DEFAULT_PROFILE=exploration`
 
-## Spawn the Infrastructure
+## Spawn the Infrastructure using `terraform`
 1. Navigate to `/path/to/example-ecs-deployment/deploy/kubectl/terraform/` folder
 2. Follow the instruction there
 
@@ -37,7 +37,7 @@ Intro to Docker!
 You just created a Node Express web application with Docker!
 ```
 
-## References
+## Links and References
 - https://kubernetes-sigs.github.io/aws-load-balancer-controller/v2.4/guide/ingress/spec/
 - https://eksctl.io/usage/schema/
 - https://blog.cloudcraft.co/containers-on-aws-ecs-eks-and-fargate/

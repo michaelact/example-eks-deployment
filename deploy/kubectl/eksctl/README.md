@@ -9,3 +9,6 @@
 
 ## Destroying Resources
 1. Run `eksctl delete cluster -f cluster.yaml`
+
+## Links and References
+- https://eksctl.io/usage/schema/
