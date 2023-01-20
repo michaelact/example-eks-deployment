@@ -1,4 +1,4 @@
-# Deploy AWS EKS Fargate using `eksctl`, `kubectl` and `terraform`
+# Deploy AWS EKS Fargate using `helm`, `eksctl`, `kubectl` and `terraform`
 
 ## Requirements
 1. [helm](https://helm.sh/docs/intro/install/): 3.10.3
