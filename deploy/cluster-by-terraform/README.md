@@ -9,6 +9,9 @@
 
 Terraform is an infrastructure as code tool that lets you build, change, and version cloud resources safely and efficiently.
 
+- Amazon Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you've defined. This virtual network closely resembles a traditional network that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.
+- AWS Security Group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic.
+
 1. Download terraform modules: `terraform init`
 2. Check what resources will be provisioned: `terraform plan`
 3. Provision the infrastructure: `terraform apply`
@@ -22,9 +25,9 @@ The kubectl config file is a configuration file that stores all the information 
 - The credentials (username and password) for authenticating with the Kubernetes API server
 - The names of all contexts defined in the cluster
 
-The file will be stored on `$HOME/.kube/config`.
-
 1. Create kubectl configuration file: `aws eks update-kubeconfig --region us-east-2 --name eks-container-fargate`
+
+The file will be stored on `$HOME/.kube/config`.
 
 ## Schedule `core-dns` onto Fargate
 
@@ -63,3 +66,5 @@ You just created a Node Express web application with Docker!
 - https://docs.aws.amazon.com/eks/latest/userguide/fargate-getting-started.html
 - https://loft.sh/blog/kubectl-get-context-its-uses-and-how-to-get-started/
 - https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-coredns-on-amazon-eks-with-fargate-automatically-using-terraform-and-python.html
+- https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html
+- https://www.checkpoint.com/cyber-hub/cloud-security/what-is-aws-security-groups/
