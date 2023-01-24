@@ -6,14 +6,32 @@
 3. [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli): 1.3.0
 
 ## Spawn the Infrastructure using `terraform`
-1. Run `terraform init`: Download terraform modules
-2. Run `terraform plan`: Check what resources will be provisioned
-3. Run `terraform apply`: Provision the infrastructure!
+
+Terraform is an infrastructure as code tool that lets you build, change, and version cloud resources safely and efficiently.
+
+1. Download terraform modules: `terraform init`
+2. Check what resources will be provisioned: `terraform plan`
+3. Provision the infrastructure: `terraform apply`
 
 ## Create Kubernetes Config File
-1. Run `aws eks update-kubeconfig --region us-east-2 --name eks-container-fargate`: Create kubectl configuration file.
+
+The kubectl config file is a configuration file that stores all the information necessary to interact with a Kubernetes cluster. It contains the following information:
+
+- The name of the Kubernetes cluster
+- The location of the Kubernetes API server
+- The credentials (username and password) for authenticating with the Kubernetes API server
+- The names of all contexts defined in the cluster
+
+The file will be stored on `$HOME/.kube/config`.
+
+1. Create kubectl configuration file: `aws eks update-kubeconfig --region us-east-2 --name eks-container-fargate`
 
 ## Schedule `core-dns` onto Fargate
+
+This pattern describes the steps to automate the deployment of Kubernetes CoreDNS pods onto an Amazon Elastic Kubernetes Service (Amazon EKS) cluster on the Amazon Web Services (AWS) Cloud using AWS Fargate when not creating the cluster using eksctl. 
+
+CoreDNS is a flexible, extensible Domain Name System (DNS) server that can serve as the Kubernetes Cluster DNS. The CoreDNS pods provide name resolution for all pods in the cluster. When you launch an Amazon EKS cluster with at least one node, two replicas of the CoreDNS image are deployed by default, regardless of the number of nodes deployed in your cluster. 
+
 1. Run `kubectl patch deployment coredns -n kube-system --type json -p='[{"op": "remove", "path": "/spec/template/metadata/annotations/eks.amazonaws.com~1compute-type"}]'`
 
 ## Install the AWS Load Balancer Controller using `helm`
@@ -43,3 +61,5 @@ You just created a Node Express web application with Docker!
 - https://docs.aws.amazon.com/eks/latest/userguide/aws-load-balancer-controller.html
 - https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html
 - https://docs.aws.amazon.com/eks/latest/userguide/fargate-getting-started.html
+- https://loft.sh/blog/kubectl-get-context-its-uses-and-how-to-get-started/
+- https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-coredns-on-amazon-eks-with-fargate-automatically-using-terraform-and-python.html
