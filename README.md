@@ -21,6 +21,6 @@
 
 ## Deployment
 1. Choose what deployment tools do you want to try, currently available are:
-   - [Cluster by EKSCTL](./deploy/cluster-by-eksctl/)
    - [Cluster by Terraform](./deploy/cluster-by-terraform/)
+   - [Cluster by EKSCTL](./deploy/cluster-by-eksctl/)
 2. Follow the instruction there
